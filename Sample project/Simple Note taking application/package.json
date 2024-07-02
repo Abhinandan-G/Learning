@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "dotenv": "^16.4.5",
+    "hapi": "^16.8.4",
+    "hapi-postgres-connection": "^7.0.0",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0"
+  }
+}
