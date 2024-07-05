@@ -11,8 +11,6 @@ server.connection({
     host: 'localhost',
     port: 8000
   });
-  
-  // This function will allow us to easily extend it later
   const main = async () => {
     await configureRoutes(server)
     await server.start()

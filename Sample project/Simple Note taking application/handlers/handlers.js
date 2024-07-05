@@ -22,7 +22,6 @@ export let postHandler = async function(request,reply){
         });
 
         console.log("Data inserted succesfully");
-        //return reply({message:"Data inserted successfully",code:200});
         return reply.response(new_note).code(200);
 
     }
@@ -31,14 +30,14 @@ export let postHandler = async function(request,reply){
         console.log("error in post method");
     }
     
-    //reply("data inserted succesfully").code(200);
+    
 }
 
 export let updateHandler = async function(request,reply){
     try{
         let id = request.params.id;
         let Payload = request.payload;
-        //console.log(The type of the parameter is ${typeof(values[0])});
+
         const [updated]=await Note.update(
             { notes_description: Payload.notes_description },
             {
@@ -54,9 +53,9 @@ export let updateHandler = async function(request,reply){
           }
           else{
             console.log("Problem in updating the data");
-            // return h.response({message: "Problem in updating the data"}).code(404);
+            
           }
-        //   return h.response("Data updated successfully");
+
 
     }
     catch(err){
@@ -68,7 +67,6 @@ export let updateHandler = async function(request,reply){
 export let deleteHandler = async function (request,reply){
     try{
         let id = request.params.id;
-        // let values = [id];
         Note.destroy({
             where: {
               notes_id: id,

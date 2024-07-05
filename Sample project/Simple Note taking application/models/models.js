@@ -26,8 +26,6 @@ class Note extends Model {}
               
             },
           );
-
-          //Note.sync();
 module.exports = {
     Note
 }
