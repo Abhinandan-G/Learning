@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 
-const {configureRoutes } = require("./routeConfigs");
+const {configureRoutes } = require("./routes/routeConfigs");
 const Hapi = require('hapi');
 
 
